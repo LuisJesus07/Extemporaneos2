@@ -82,7 +82,13 @@
 
 .menu ul li a{
 	text-decoration: none;
+	color: black;
 
+}
+
+.menu ul li a:hover{
+	color: #007bff;
+	transition: all linear .3s;
 }
 
 .salir{

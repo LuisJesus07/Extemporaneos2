@@ -6,7 +6,8 @@
 	
 	if (isset($_POST['idMateria'] )){
 
-			$idUsuario = $_POST['idUsuario'];
+			session_start();
+			$idUsuario = $_SESSION['datosUsuario']['idUsuario'];
 			$idMateria = $_POST['idMateria'];
 
 			// Ver cuantos examenes tiene el alumno

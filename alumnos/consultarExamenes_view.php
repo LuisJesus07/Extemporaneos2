@@ -1,3 +1,5 @@
+<?php include '../estructura/headerAlumno.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +7,6 @@
 </head>
 <body>
 
-	<?php include '../estructura/header.php' ?>
 
 	<div class="opciones datos-tabla">
 
@@ -19,6 +20,8 @@
 			include("../DB/conexion.php");
 			$base=conectar();
 
+			//id del usuario con la sesion abierta
+			$idUsuario = $_SESSION['datosUsuario']['idUsuario'];
 
 			//obtener examenes aceptados por carrera
 			$query = "SELECT USU.idUsuario,USU.numControl,USU.nombre,USU.apellidoPaterno,USU.apellidoMaterno,PLAN.nombrePlan,CARR.nombreCarrera,
@@ -33,7 +36,7 @@
 			$resultado = $base->prepare($query);
 
 		
-		    $resultado->execute(array(":idUsuario"=>1));
+		    $resultado->execute(array(":idUsuario"=>$idUsuario));
 
 			$examenes = $resultado->fetchAll(PDO::FETCH_ASSOC);
 

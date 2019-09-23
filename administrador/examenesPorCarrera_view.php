@@ -1,3 +1,5 @@
+<?php include '../estructura/headerAdmin.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +17,6 @@
 </head>
 <body>
 
-	<?php include '../estructura/header.php' ?>
 
 	<div class="opciones datos-tabla">
 

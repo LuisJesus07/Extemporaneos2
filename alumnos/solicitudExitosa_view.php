@@ -1,4 +1,4 @@
-<?php include '../estructura/header.php' ?>
+<?php include '../estructura/headerAlumno.php' ?>
 
 <div class="opciones">
 

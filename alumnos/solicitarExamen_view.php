@@ -1,4 +1,4 @@
-<?php include '../estructura/header.php' ?>
+<?php include '../estructura/headerAlumno.php' ?>
 
 	<div class="opciones">
 
@@ -11,17 +11,13 @@
 				
 				<h2>Extemporaneo</h2>
 
-				<label>IdAlumno: </label>
-				<input type="text" name="idUsuario" value="1"><br>
-
-
 				<label>Materia :</label>
 				<select name="idMateria">
 					<?php 
 					include("../DB/conexion.php");
 					$base=conectar();
 
-					
+					/*
 					$sentencia = $base->prepare("SELECT MAT.idMateria,MAT.nombreMateria,PLAN.nombrePlan
 						FROM materias AS MAT
 						INNER JOIN planesDeEstudio AS PLAN ON MAT.idPlanDeEstudio=PLAN.idPlanDeEstudio
@@ -30,6 +26,24 @@
 						
 						$sentencia->execute();
 						$materias = $sentencia-> fetchAll(PDO::FETCH_ASSOC);
+					*/
+					//id del usuario con la sesion abierta
+					$plan = $_SESSION['datosUsuario']['idPlanDeEstudio'];
+
+
+					//obtener examenes aceptados por carrera
+					$query = "SELECT MAT.idMateria,MAT.nombreMateria,PLAN.idPlanDeEstudio
+						FROM materias AS MAT
+						INNER JOIN planesDeEstudio AS PLAN ON MAT.idPlanDeEstudio=PLAN.idPlanDeEstudio
+						WHERE PLAN.idPlanDeEstudio = :idPlanDeEstudio
+						ORDER BY MAT.nombreMateria ASC";
+
+					$resultado = $base->prepare($query);
+
+				
+				    $resultado->execute(array(":idPlanDeEstudio"=>$plan));
+
+					$materias = $resultado->fetchAll(PDO::FETCH_ASSOC);
 					
 					?>
 
@@ -40,6 +54,7 @@
 
 					<?php } ?>
 				</select>
+
 
 			</div>
 

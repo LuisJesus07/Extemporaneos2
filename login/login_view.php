@@ -17,7 +17,7 @@
 			<div class="menu-container login">
 				<nav class="menu">
 					<ul class="main-menu">
-						<form method="POST" action="">
+						<form method="POST" action="iniciarSesion_back.php">
 							<label>Correo: </label>
 							<input type="text" name="correo">
 

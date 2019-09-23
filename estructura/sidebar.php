@@ -7,15 +7,15 @@
 				<div class="info-cuenta-cabecera">Tipo cuenta: </div>
 
 
-				<div class="info-cuenta-cabecera informacion">Administrador</div>
+				<div class="info-cuenta-cabecera informacion"><?php if($_SESSION['datosUsuario']['privilegios'] == 1){echo "Aministrador";}else{echo "Alumno";}  ?></div>
 
 				
 
 				<div class="info-cuenta-cabecera">Nombre: </div>
-				<div class="info-cuenta-cabecera informacion">Luis</div>
+				<div class="info-cuenta-cabecera informacion"><?php echo $_SESSION['datosUsuario']['nombre'] ?></div>
 
 				<div class="info-cuenta-cabecera">Correo: </div>
-				<div class="info-cuenta-cabecera informacion">@</div>
+				<div class="info-cuenta-cabecera informacion"><?php echo $_SESSION['datosUsuario']['correo'] ?></div>
 
 			</div>
 

@@ -1,3 +1,5 @@
+<?php include '../estructura/headerAdmin.php' ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,8 +16,6 @@
 	<script type="text/javascript" src="../js/generarExcel.js"></script>
 </head>
 <body>
-
-	<?php include '../estructura/header.php' ?>
 
 	<div class="opciones datos-tabla">
 

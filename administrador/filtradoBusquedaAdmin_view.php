@@ -1,5 +1,5 @@
 
-<?php include '../estructura/header.php' ?>
+<?php include '../estructura/headerAdmin.php' ?>
 
 <div class="opciones">
 
