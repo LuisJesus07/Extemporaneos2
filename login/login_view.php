@@ -7,88 +7,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
 </head>
 <body>
-<!--
-	<header class="header">
-
-		<div class="main-header">
-
-			
-			<div class="menu-container login">
-				<nav class="menu">
-					<ul class="main-menu">
-						<form method="POST" action="iniciarSesion_back.php">
-							<label>Correo: </label>
-							<input type="text" name="correo">
-
-							<label>Contraseña: </label>
-							<input type="text" name="password">
-							
-							<input type="submit" name="" value="Ingresar">
-						</form>
-					</ul>
-				</nav>
-			</div>
-
-			<div class="logo">
-
-				<a href=""><img src="../img/logouabcs1.png"></a>
-				
-			</div>
-			
-			
-		</div>
-
-	</header>
-
-	<div class="login-principal">
-
-		<div class="form-registro">
-			<form method="POST" action="guardarUsuario_back.php" name="form-registro">
-
-				<label>Numero de Control: </label>
-				<input type="text" name="numControl">
-
-				<label>Nombre: </label>
-				<input type="text" name="nombre">
-
-				<label>Apellido Paterno: </label>
-				<input type="text" name="apellidoPaterno">
-
-				<label>Apellido Materno: </label>
-				<input type="text" name="apellidoMaterno">
-
-				<label>Correo: </label>
-				<input type="text" name="correo">
-
-				<label>Contraseña: </label>
-				<input type="text" name="password">
-
-				<label>Plan de Estudios: </label>
-				<input type="text" name="plan">
-
-				<?php if(!empty($errors)): ?>
-					<div class="alert alert-danger">
-						<?php echo $errors ?>
-					</div>
-				<?php endif ?>
-
-
-				<input type="submit" name="" value="Registrarme">
-				
-			</form>
-		</div>	
-
-	</div>
-
--->
 
 	<section class="principal">
 		<h1>DEPARTAMENTO ACADÉMICO DE CIENCIAS SOCIALES Y JURÍDICAS</h1>
 		<h2>SOLICITUD DE EXÁMENES EXTEMPORANEOS</h2>
 		<p>Regístrate en la plataforma para realizar tus solicitudes de exámenes extemporáneos, toma en cuenta que por reglamento se tiene derecho a dos exámenes por periodo, a partir de la tercera solicitud serán sujetas a aprobación. </p>
-		<a href="#" class="bt-home" id="activarLogin"><i class="fas fa-sign-in-alt separar"></i></i>Ingresar</a>
+		<a href="" class="bt-home" id="activarLogin"><i class="fas fa-sign-in-alt separar"></i></i>Ingresar</a>
 		<a href="" class="bt-home" id="activarRegistro"><i class="fa fa-user-plus separar" aria-hidden="true"></i>
  		Registrarme</a>
 	</section>
@@ -107,15 +34,16 @@
 			x
 		</div>
 		<h1>Registro</h1>
-		<form method="POST" action="guardarUsuario_back.php">
-			<input type="text" name="numControl" placeholder="Numero de Control">
-			<input type="text" name="nombre" placeholder="Nombre">
-			<input type="text" name="apellidoPaterno" placeholder="Apellido Paterno">
-			<input type="text" name="apellidoMaterno" placeholder="Apellido materno">
-			<input type="email" name="correo" placeholder="Correo">
-			<input type="password" name="password" placeholder="Contraseña">
+		<form id="form-register" autocomplete="off">
+			
+			<input type="text" name="numControl" id="numControl" placeholder="Numero de Control" required>
+			<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+			<input type="text" name="apellidoPaterno" id="apellidoP" placeholder="Apellido Paterno" required>
+			<input type="text" name="apellidoMaterno" id="apellidoM" placeholder="Apellido materno" required>
+			<input type="email" name="correo" id="email" placeholder="Correo">
+			<input type="password" name="password" id="password" placeholder="Contraseña" required>
 			<label>Plan de Estudio: </label>
-			<select name="plan">
+			<select name="plan" id="plan" required>
 				<option value="1">Comunicación 2000</option>
 				<option value="2">Comunicación 2010</option>
 				<option value="3">Derecho 1993</option>
@@ -124,15 +52,19 @@
 				<option value="6">CP y AP 1978</option>
 				<option value="7">CP y AP 1995</option>
 			</select>
+			<div id="response"></div>
 
-
-			<input type="submit" value="Crear">
+			<input type="submit" value="Registrarse">
+			
 		</form>
 	</div>
 	
 
 </body>
 	<!--<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>-->
-	<script type="text/javascript" src="../js/buttons/jquery-3.3.1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../js/acciones.js"></script>
+	<script type="text/javascript" src="../js/registro.js"></script>
 </html>
