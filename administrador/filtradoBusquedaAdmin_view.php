@@ -1,4 +1,3 @@
-
 <?php include '../estructura/headerAdmin.php' ?>
 
 <div class="opciones">

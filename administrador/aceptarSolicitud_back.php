@@ -1,13 +1,19 @@
 <?php
 
-if(isset($_GET)){
-	var_dump($_GET);
+
+class AceptarSolicitud{
+
+	function aceptar($param = null){
+
+		//ejecutar query 
+
+
+		echo "Examen aceptado";
+
+	}
 }
 
-function aceptarSolicitud($parm = null){
-	$idSolicitud = $parm[0];
-}
-
+//echo "Hola";
 //echo $idSolicitud;
 
 

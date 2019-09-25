@@ -15,7 +15,7 @@ botones.forEach(boton => {
 		if(confirm){
 			//ejecutamos AJAX
 
-			httpRequest("aceptarSolicitud_back.php/aceptarSolicitud/"+ idSolicitudExamen, function(){
+			httpRequest("aceptarSolicitud_back.php/AceptarSolicitud/aceptar/"+ idSolicitudExamen, function(){
 
 				document.querySelector("#respuesta").innerHTML = this.responseText;
 				

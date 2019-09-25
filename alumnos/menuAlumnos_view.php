@@ -1,4 +1,3 @@
-
 <?php include '../estructura/headerAlumno.php' ?>
 
 <div class="principal">
