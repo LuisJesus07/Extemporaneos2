@@ -9,7 +9,7 @@
 			<div class="opciones-btn">
 
 				<div class="opcion">
-					<img src="../img/materias.png">
+					<img src="../img/consultar.png">
 
 					<a href="filtradoBusquedaAdmin_view.php"><input type="button" name="" value="Ver Solicitudes" ></a>
 				</div>

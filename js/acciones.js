@@ -11,12 +11,19 @@ function desaparecelogin (){
 	}, 500);
 }
 
+function desparecerExito(){
+	$(".registro-exitoso").fadeOut(200);
+	$("#oscurecer").fadeOut();
+}
+
 function desapareceRegistro(){
 	$("#oscurecer").fadeOut();
 }
 
+
 function desapareceFormulario(){
 	$("#registrar").fadeOut(300, desapareceRegistro);
+	$(".registro-exitoso").fadeOut(300, desapareceRegistro);
 }
 
 function mostrarFormulario(){

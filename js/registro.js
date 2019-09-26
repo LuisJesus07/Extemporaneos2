@@ -15,16 +15,18 @@ $(function(){//Código JQUERY:
         $.post(url, postData, function(response){//Método POST de Jquery para mandar los datos y la url
             console.log(response);
             if(response==1){
-                $('#response').html("<p>¡Te haz registrado correctamente!</p>");
-                $('#form-register').trigger("reset");//Limpiamos el formulario
+                $('.registrar').fadeOut(100);
+                $('.registro-exitoso').fadeIn(300);
             }else{
 
                 if(response == 2){
                     $('#response').html("<p>Ese numero de control ya exite.</p>");
-                    $('#email').val("");
+                    $('#response').addClass('error');
+                    //$('#email').val("");
                 }else{
-                    $('#response').html("<p>Email inválido, intenta con otro.</p>");
-                    $('#email').val("");
+                    $('#response').html("<p>Ese correo ya existe, intenta con otro.</p>");
+                    $('#response').addClass('error');
+                    //$('#email').val("");
                 }
                 
             }

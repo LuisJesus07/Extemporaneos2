@@ -22,12 +22,18 @@
 	<div class="login" id="login">
 		<a href="" class="cerrar" id="cerrar"><i class="fa fa-times" aria-hidden="true"></i></a>
 		<form method="POST" action="iniciarSesion_back.php">
-			<input type="email" name="correo" required placeholder="Usuario">
+			<input type="text" name="correo" required placeholder="Usuario">
 			<input type="password" name="password" requered placeholder="********">
 			<input type="submit" value="Entrar" >
 		</form>
 	</div>
 	<div class="oscurecer" id="oscurecer"></div>
+
+	<div class="registro-exitoso">
+		<img src="../img/correcto.png">
+		<label>¡Te haz registrado correctamente!</p></label>
+		<button onclick="desparecerExito()">Aceptar</button>
+	</div>
 
 	<div class="registrar" id="registrar">
 		<div class="cerrarRegistro" id="cerrarRegistro">

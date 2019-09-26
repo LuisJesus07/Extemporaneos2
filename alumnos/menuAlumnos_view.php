@@ -16,7 +16,7 @@
 			</div>
 
 			<div class="opcion">
-				<img src="../img/materias.png">
+				<img src="../img/consultar.png">
 
 				<a href="consultarExamenes_view.php"><input type="button" name="" value="Consultar" ></a>
 			</div>
