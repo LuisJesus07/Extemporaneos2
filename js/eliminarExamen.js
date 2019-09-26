@@ -10,12 +10,13 @@ botones.forEach(boton => {
 
 		//console.log(matricula);
 
-		const confirm = window.confirm("Desea aceptar este examen?");
+		const confirm = window.confirm("Desea eliminar este examen?");
 
 		if(confirm){
 			//ejecutamos AJAX
 
-			httpRequest("aceptarSolicitud_back.php",idSolicitudExamen, function(){
+
+			httpRequest("eliminarExamen_back.php",idSolicitudExamen, function(){
 
 				//agregar clase de mensaje exito
 				document.querySelector("#respuesta").classList.add("exito");
@@ -45,6 +46,7 @@ function httpRequest(url,idSolicitudExamen, callback){
 	http.open("POST", url);
 
 	http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
 
 	//mandamos la solicitud
 	http.send('idSolicitudExamen='+idSolicitudExamen);

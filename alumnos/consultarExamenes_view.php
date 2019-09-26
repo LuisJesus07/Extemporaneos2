@@ -72,7 +72,7 @@
 						<td><?php echo $examen['nombreCarrera'] ?></td>
 						<td><?php echo $examen['nombreMateria'] ?></td>
 						<td><?php if($examen['estado'] == 1){echo "Aceptado";}else{echo "Espera";} ?></td>
-						<td><a href="" class="btn-eliminar" data-idSolicitud="<?php echo $examen['idSolicitudExamen'] ?>"><i class="fas fa-trash-alt"></i></a></td>
+						<td><a class="btn-eliminar" data-idSolicitud="<?php echo $examen['idSolicitudExamen'] ?>"><i class="fas fa-trash-alt"></i></a></td>
 
 					</tr>
 					
@@ -90,5 +90,5 @@
 
 
 </body>
-<script type="text/javascript" src="../js/aceptarSolicitud.js"></script>
+<script type="text/javascript" src="../js/eliminarExamen.js"></script>
 </html>
