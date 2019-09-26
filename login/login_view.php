@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 </head>
@@ -19,6 +18,7 @@
 		<a href="" class="bt-home" id="activarRegistro"><i class="fa fa-user-plus separar" aria-hidden="true"></i>
  		Registrarme</a>
 	</section>
+
 	<div class="login" id="login">
 		<a href="" class="cerrar" id="cerrar"><i class="fa fa-times" aria-hidden="true"></i></a>
 		<form method="POST" action="iniciarSesion_back.php">
@@ -26,6 +26,7 @@
 			<input type="password" name="password" requered placeholder="********">
 			<input type="submit" value="Entrar" >
 		</form>
+		<a href="#" onclick="aparecerRecuperarPassword()">Olvide mi contrseña</a>
 	</div>
 	<div class="oscurecer" id="oscurecer"></div>
 
@@ -33,6 +34,20 @@
 		<img src="../img/correcto.png">
 		<label>¡Te haz registrado correctamente!</p></label>
 		<button onclick="desparecerExito()">Aceptar</button>
+	</div>
+
+	<div class="recuperar-password">
+		<div class="cerrarRegistro" onclick="desaparecerRecuperarPassword()">
+			x
+		</div>
+		<img src="../img/icono-password.png">
+		<form id="form-recuperar-password">
+			<label>Ingresa tu correo electronico para recuperar tu contrseña.</label>
+			<input type="email" id="correo">
+
+			<input type="submit" name="" value="Enviar">
+			<div id="response-password"></div>
+		</form>
 	</div>
 
 	<div class="registrar" id="registrar">
@@ -73,4 +88,5 @@
     crossorigin="anonymous"></script>
 	<script type="text/javascript" src="../js/acciones.js"></script>
 	<script type="text/javascript" src="../js/registro.js"></script>
+	<script type="text/javascript" src="../js/recuperarPassword.js"></script>
 </html>

@@ -31,7 +31,8 @@
 				INNER JOIN carreras AS CARR ON CARR.idCarrera=PLAN.idCarrera
 				INNER JOIN solicitudesExamenes AS SOLI ON USU.idUsuario=SOLI.idUsuario
 				INNER JOIN materias AS MAT ON MAT.idMateria=SOLI.idMateria
-				WHERE USU.idUsuario = :idUsuario";
+				WHERE USU.idUsuario = :idUsuario
+				ORDER BY SOLI.estado ASC";
 
 			$resultado = $base->prepare($query);
 

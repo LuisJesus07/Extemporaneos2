@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Varela");
 
 * {
-	margin: 0;
+	margin: 0; 
 	padding: 0;
 	color: #000;
 
@@ -226,6 +226,38 @@ input[type="submit"]:hover{
 	transition: all linear .3s;
 	transform: scale(1.1);
 }
+
+.recuperar-password{
+	width: 30%;
+	background: #fff;
+	border-radius: 1em;
+	padding: 3em;
+	position: fixed;
+	top: 30px;
+	left: 35%;
+	z-index: 200;
+	display: none;
+}
+
+.recuperar-password img{
+	margin-left: 28%;
+}
+
+.recuperar-password form input{
+	display: block;
+}
+
+.recuperar-password input[type="email"]{
+	width: 80%;
+	margin-top: 2%;
+	margin-left: 10%;
+}
+
+.recuperar-password input[type="submit"]{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
 /* fin login  */
 
 
