@@ -8,7 +8,6 @@
 	<script type="text/javascript" src="../js/buttons/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="../js/buttons/dataTables.buttons.min.js"></script>
 	<script type="text/javascript" src="../js/buttons/jszip.min.js"></script>
-	<script type="text/javascript" src="../js/buttons/pdfmake.min.js"></script>
 	<script type="text/javascript" src="../js/buttons/vfs_fonts.js"></script>
 	<script type="text/javascript" src="../js/buttons/buttons.print.min.js"></script>
 	<script type="text/javascript" src="../js/buttons/buttons.html5.min.js"></script>
