@@ -19,7 +19,8 @@ botones.forEach(boton => {
 			httpRequest("eliminarExamen_back.php",idSolicitudExamen, function(){
 
 				//agregar clase de mensaje exito
-				document.querySelector("#respuesta").classList.add("exito");
+				document.querySelector("#respuesta").classList.add("alert");
+				document.querySelector("#respuesta").classList.add("alert-success");
 
 				document.querySelector("#respuesta").innerHTML = this.responseText;
 				

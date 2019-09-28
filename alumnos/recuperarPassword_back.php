@@ -19,7 +19,7 @@
 
         if($fila==1 ){//Si no hay un correo igual hace el insert
             //enviar correo
-            mail($correo, "DEPARTAMENTO ACADÉMICO DE CIENCIAS SOCIALES Y JURÍDICAS", "Tu contraseña es:".$password);
+            mail($correo, "DEPARTAMENTO ACADÉMICO DE CIENCIAS SOCIALES Y JURÍDICAS", "Tu contraseña es: ".$password);
             echo 1;
         }else{
             //esa cuenta no esta registrada
