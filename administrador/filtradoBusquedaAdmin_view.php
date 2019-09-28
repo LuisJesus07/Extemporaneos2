@@ -78,7 +78,7 @@
 	<!-- MAIN -->  
 	<div class="col text-center">
 		<h1 class="display-4 mt-3">Filtrar Busqueda</h1>
-	    <div class="row mx-auto">
+	    <div class="row principal mx-auto">
 
 	    	<div class="col-md-6">
 	    		<div class="pricing-container">

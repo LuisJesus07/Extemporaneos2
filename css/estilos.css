@@ -217,3 +217,12 @@ body {
     a.bg-dark {
         background-color: #132644 !important;
     }
+
+
+/* responsive */
+
+@media screen and (min-width: 1500px){
+    .principal{
+        width: 1200px;
+    }
+}
