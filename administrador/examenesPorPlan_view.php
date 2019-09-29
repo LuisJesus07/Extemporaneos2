@@ -60,8 +60,8 @@ $examenes = $resultado->fetchAll(PDO::FETCH_ASSOC);
 		                    <th class="text-secondary">Nombre</th>
 		                    <th class="text-secondary">Apellido Paterno</th>
 		                    <th class="text-secondary">Apellido Materno</th>
-		                    <th class="text-secondary">Carrera</th>
 		                    <th class="text-secondary">Plan</th>
+		                    <th class="text-secondary">Carrera</th>
 		                    <th class="text-secondary">Materia</th>
 		                </tr> 
 		            </thead>

@@ -52,7 +52,7 @@
                     <span class="menu-collapsed">Ver Solicitudes</span>
                 </div>
             </a>
-            <a href="consultarExamenes_view.php" class="bg-dark list-group-item list-group-item-action">
+            <a href="solicitudesEnEspera_view.php" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-clipboard fa-fw mr-3"></span>
                     <span class="menu-collapsed">Aceptar Solicitudes</span>
@@ -131,19 +131,20 @@
 	    				<form method="POST" action="examenesPorMateria_view.php">
 
 	    					<label class="display-5">Plan:</label>
-							<select class="form-control" name="plan">
-								<option>Comunicación 2000</option>
-								<option>Comunicación 2010</option>
-								<option>Derecho 1993</option>
-								<option>Derecho 2012</option>
-								<option>Criminología 2018</option>
-								<option>CP y AP 1978</option>
-								<option>CP y AP 1995</option>
+							<select class="form-control" id="plan" name="plan">
+								<option value="1">Comunicación 2000</option>
+								<option value="2">Comunicación 2010</option>
+								<option value="3">Derecho 1993</option>
+								<option value="4">Derecho 2012</option>
+								<option value="5">Criminología 2018</option>
+								<option value="6">CP y AP 1978</option>
+								<option value="7">CP y AP 1995</option>
 							</select>
 
 							
 							<label>Materia: </label>
-							<input class="form-control" type="text" name="materia"><br>
+							<div id="materia"></div>
+							<!--<input class="form-control" type="text" name="materia">--><br>
 							
 
 							<input class="btn btn-success" type="submit" name="" value="Buscar">
@@ -161,15 +162,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/sidebar.js"></script>
-
-
-
-
-
-
-
-
-
+<script type="text/javascript" src="../js/selectMaterias.js"></script>
 
 <!--<div class="opciones">
 

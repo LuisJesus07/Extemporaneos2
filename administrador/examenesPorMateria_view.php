@@ -16,13 +16,13 @@ $query = "SELECT USU.numControl,USU.nombre,USU.apellidoPaterno,USU.apellidoMater
 	INNER JOIN carreras AS CARR ON CARR.idCarrera=PLAN.idCarrera
 	INNER JOIN solicitudesExamenes AS SOLI ON USU.idUsuario=SOLI.idUsuario
 	INNER JOIN materias AS MAT ON MAT.idMateria=SOLI.idMateria
-	WHERE PLAN.nombrePLAN = :nombrePlan AND MAT.nombreMateria = :nombreMateria";
+	WHERE PLAN.idPlanDeEstudio = :plan AND MAT.nombreMateria = :nombreMateria";
 
 
 $resultado = $base->prepare($query);
 
 
-$resultado->execute(array(":nombrePlan"=>$plan, ":nombreMateria"=>$materia));
+$resultado->execute(array(":plan"=>$plan, ":nombreMateria"=>$materia));
 
 $examenes = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
@@ -62,8 +62,8 @@ $examenes = $resultado->fetchAll(PDO::FETCH_ASSOC);
 		                    <th class="text-secondary">Nombre</th>
 		                    <th class="text-secondary">Apellido Paterno</th>
 		                    <th class="text-secondary">Apellido Materno</th>
-		                    <th class="text-secondary">Carrera</th>
 		                    <th class="text-secondary">Plan</th>
+		                    <th class="text-secondary">Carrera</th>
 		                    <th class="text-secondary">Materia</th>
 		                </tr> 
 		            </thead>
