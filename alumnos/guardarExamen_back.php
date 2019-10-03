@@ -6,9 +6,13 @@
 	
 	if (isset($_POST['idMateria'] )){
 
+			//inicializar la hora de acuerdo a la zona
+			ini_set('date.timezone', 'America/Mazatlan');
+
 			session_start();
 			$idUsuario = $_SESSION['datosUsuario']['idUsuario'];
 			$idMateria = $_POST['idMateria'];
+			$fecha = date('Y:m:d', time());
 
 			// Ver cuantos examenes tiene el alumno
 			$query = "SELECT COUNT(USU.idUsuario)
@@ -37,12 +41,12 @@
 			try{
 
 				
-		    	$query = "INSERT INTO solicitudesExamenes(estado,idUsuario,idMateria) VALUES(:estado,:idUsuario,:idMateria)";
+		    	$query = "INSERT INTO solicitudesExamenes(estado,idUsuario,idMateria,fechaRegistro) VALUES(:estado,:idUsuario,:idMateria,:fechaRegistro)";
 
 				$resultado = $base->prepare($query);
 
 		
-		    	$resultado->execute(array(":estado"=>$estado, ":idUsuario"=>$idUsuario, ":idMateria"=>$idMateria));
+		    	$resultado->execute(array(":estado"=>$estado, ":idUsuario"=>$idUsuario, ":idMateria"=>$idMateria, ":fechaRegistro"=>$fecha));
 
 
 		    	$resultado->closeCursor();
