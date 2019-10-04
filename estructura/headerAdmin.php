@@ -46,49 +46,6 @@ if(empty($_SESSION['datosUsuario']['privilegios']) || $_SESSION['datosUsuario'][
 		  </div>
 		</nav>
 
-	<!--<header class="header">
-
-		<div class="main-header">
-
-			
-
-			<div class="menu-container">
-
-
-				<nav class="menu">
-					<ul class="main-menu">
-
-						<li>
-							<a href="filtradoBusquedaAdmin_view.php">Ver Solicitudes</a>
-						</li>
-
-						<li>
-							<a href="solicitudesEnEspera_view.php">Aceptar Solicitudes</a>
-						</li>
-
-						<li>
-							<a href="../login/cerrarSesion_back.php"><i class="fas fa-sign-out-alt salir"></i></a>
-						</li>					
-
-					</ul>
-
-					
-				</nav>
-
-				
-
-			</div>
-
-			<div class="logo">
-
-				<a href="<?php echo constant('URL') ?>main/main"><img src="../img/logouabcs1.png"></a>
-				
-			</div>
-			
-			
-		</div>
-
-	</header>-->
 
 </body>
 </html>

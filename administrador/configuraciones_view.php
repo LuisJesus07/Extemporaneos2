@@ -1,5 +1,24 @@
 <?php include '../estructura/headerAdmin.php' ?>
 
+<?php  
+include("../DB/conexion.php");
+$base=conectar();
+
+
+//obtener examenes aceptados por carrera
+$query = "SELECT estado FROM periodo;";
+
+$resultado = $base->prepare($query);
+
+
+$resultado->execute();
+
+$periodo = $resultado->fetch()[0];
+
+
+
+?>
+
 <div class="container-fluid p-0">
   
 <!-- Bootstrap row -->
@@ -76,40 +95,47 @@
     <!-- MAIN -->
     
 	<div class="col text-center">
-		<h1 class="display-4 mt-3">Administrador</h1>
-	    <div class="row principal mx-auto">
+		<h1 class="display-4 mt-3">Configuraciones</h1>
+		<div class="row principal mx-auto">
+		    <div class="col-md-6">
 
-	    	<div class="col-md-6">
-	    		<div class="pricing-container">
-	    			<div class="plans">
-	    				<h3>Ver Solicitudes</h3>
-	    				<img class="d-block mx-auto img" src="../img/consultarExamenes.png">
-	    				<a href="filtradoBusquedaAdmin_view.php" class="btn mx-auto mt-3 btn-primary btn-lg">Ver</a>
-	    			</div>
-	    		</div>
-	    	</div>
+		    	<div class="card card-config">
+		    		<div class="card-header" style="background-color: #132644;">
+		    			<h3>Periodo de solicitudes</h3>
+		    		</div>
+		    		<div class="card-body">
+		    			<p>Cuando el periodo este activo, los alumnos podran realizar las solicitudes de examenes, en caso de no estarlo, las solicitudes no seran registradas.</p>
+		    			<?php if($periodo==1){ ?>
+		    				<h4 class="alert alert-success">Estado Actual : Activo</h4>
 
-	    	<div class="col-md-6">
-	    		<div class="pricing-container">
-	    			<div class="plans">
-	    				<h3>Aceptar Solicitudes</h3>
-	    				<img class="d-block mx-auto img" src="../img/solicitar.png">
-	    				<a href="solicitudesEnEspera_view.php" class="btn mx-auto mt-3 btn-primary btn-lg">Ver</a>
-	    			</div>
-	    		</div>
-	    	</div>
+		    				<a class="btn mx-auto mt-3 btn-outline-danger btn-lg btn-estado-periodo">Desactivar</a>
+		    			<?php }else{ ?>
+		    				<h4 class="alert alert-warning">Estado Actual : Inactivo</h4>
 
-            <div class="col-md-6">
-                <div class="pricing-container">
-                    <div class="plans">
-                        <h3>Configuraciones</h3>
-                        <img class="d-block mx-auto img" src="../img/config.png">
-                        <a href="configuraciones_view.php" class="btn mx-auto mt-3 btn-primary btn-lg">Ver</a>
-                    </div>
-                </div>
-            </div>
+		    				<a class="btn mx-auto mt-3 btn-outline-success btn-lg btn-estado-periodo">Activar</a>
+		    			<?php } ?>
 
-	    </div>
+		    			<div id="response"></div>
+		    		
+		    		</div>
+		    	</div>
+		    </div>
+
+		    <div class="col-md-6">
+
+		    	<div class="card card-config">
+		    		<div class="card-header" style="background-color: #f8d7da; color: #721c24;">
+		    			<h3>Reiniciar ciclo de extemporaneos</h3>
+		    		</div>
+		    		<div class="card-body">
+		    			<p>Al reiniciar el ciclo de extemporaneos se borraran todos los registros de examenes actuales, por lo que solo se debe de reiniciar una vez concluido el periodo de solicitudes.</p>
+
+		    			<a href="#" class="btn mx-auto mt-3 btn-outline-danger btn-lg">Reiniciar</a>
+		    		</div>
+		    	</div>
+		    </div>
+
+		</div>
 	</div>
        
 
@@ -121,40 +147,7 @@
   
 </div><!-- container -->
 
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../js/sidebar.js"></script>
-
-
-
-
-
-
-
-<!--<div class="principal">
-		
-		<div class="opciones">
-
-			<h1>Administrador</h1>
-
-			<div class="opciones-btn">
-
-				<div class="opcion">
-					<img src="../img/consultar.png">
-
-					<a href="filtradoBusquedaAdmin_view.php"><input type="button" name="" value="Ver Solicitudes" ></a>
-				</div>
-
-				<div class="opcion">
-					<img src="../img/inscribir.png">
-
-					<a href="solicitudesEnEspera_view.php"><input type="button" name="" value="Aceptar Solicitudes"></a>
-					
-				</div>
-
-				
-			</div>
-			
-
-		</div>-->
+<script type="text/javascript" src="../js/estadoPeriodo.js"></script>
