@@ -161,7 +161,21 @@ body {
     text-align: justify;
 }
 
+.btn-estado-periodo{
+    color: white!important;
+}
+
 .btn-estado-periodo:hover{
+    transition: all linear .3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn-reiniciar{
+    color: #dc3545!important;
+}
+
+.btn-reiniciar:hover{
     color: white!important;
     cursor: pointer;
 }

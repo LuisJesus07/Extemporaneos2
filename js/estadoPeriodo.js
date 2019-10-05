@@ -21,8 +21,8 @@ btnEstadoPeriodo.addEventListener("click", function(){
 
 			//cambiar btn
 			btn.innerHTML = "Desactivar";
-			btn.classList.remove('btn-outline-success');
-			btn.classList.add('btn-outline-danger');
+			btn.classList.remove('btn-success');
+			btn.classList.add('btn-danger');
 
 			swal("Periodo Activado!", "El periodo de solicitudes esta activo", "success");
 
@@ -35,8 +35,8 @@ btnEstadoPeriodo.addEventListener("click", function(){
 
 				//cambiar btn
 				btn.innerHTML = "Activar";
-				btn.classList.remove('btn-outline-danger');
-				btn.classList.add('btn-outline-success');
+				btn.classList.remove('btn-danger');
+				btn.classList.add('btn-success');
 
 				swal("Periodo Desactivado!", "El periodo de solicitudes esta inactivo", "success")
 			}

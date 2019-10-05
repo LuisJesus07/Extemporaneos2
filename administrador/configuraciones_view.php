@@ -99,7 +99,7 @@ $periodo = $resultado->fetch()[0];
 		<div class="row principal mx-auto">
 		    <div class="col-md-6">
 
-		    	<div class="card card-config">
+		    	<div class="card card-config mt-3">
 		    		<div class="card-header" style="background-color: #132644;">
 		    			<h3>Periodo de solicitudes</h3>
 		    		</div>
@@ -109,11 +109,11 @@ $periodo = $resultado->fetch()[0];
 		    			<?php if($periodo==1){ ?>
 		    				<h4 class="alert alert-success">Estado Actual : Activo</h4>
 
-		    				<a class="btn mx-auto mt-3 btn-outline-danger btn-lg btn-estado-periodo">Desactivar</a>
+		    				<a class="btn mx-auto mt-3 btn-danger btn-lg btn-estado-periodo">Desactivar</a>
 		    			<?php }else{ ?>
 		    				<h4 class="alert alert-warning">Estado Actual : Inactivo</h4>
 
-		    				<a class="btn mx-auto mt-3 btn-outline-success btn-lg btn-estado-periodo">Activar</a>
+		    				<a class="btn mx-auto mt-3 btn-success btn-lg btn-estado-periodo">Activar</a>
 		    			<?php } ?>
 
 		    			<div id="response"></div>
@@ -124,14 +124,14 @@ $periodo = $resultado->fetch()[0];
 
 		    <div class="col-md-6">
 
-		    	<div class="card card-config">
+		    	<div class="card card-config mt-3">
 		    		<div class="card-header" style="background-color: #f8d7da; color: #721c24;">
 		    			<h3>Reiniciar ciclo de extemporaneos</h3>
 		    		</div>
 		    		<div class="card-body">
 		    			<p>Al reiniciar el ciclo de extemporaneos se borraran todos los registros de examenes actuales, por lo que solo se debe de reiniciar una vez concluido el periodo de solicitudes.</p>
 
-		    			<a href="#" class="btn mx-auto mt-3 btn-outline-danger btn-lg">Reiniciar</a>
+		    			<a class="btn mx-auto mt-3 btn-outline-danger btn-lg btn-reiniciar">Reiniciar</a>
 		    		</div>
 		    	</div>
 		    </div>
@@ -153,3 +153,4 @@ $periodo = $resultado->fetch()[0];
 <script type="text/javascript" src="../plugins/sweetalert.js"></script>
 <script type="text/javascript" src="../js/sidebar.js"></script>
 <script type="text/javascript" src="../js/estadoPeriodo.js"></script>
+<script type="text/javascript" src="../js/reiniciarCiclo.js"></script>
